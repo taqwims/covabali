@@ -11,8 +11,11 @@ RUN npm install
 # Copy seluruh file aplikasi
 COPY . .
 
+# Set lingkungan (opsional)
+ENV NODE_ENV=production
+
 # Expose port yang akan digunakan aplikasi
-EXPOSE 3000
+EXPOSE 8080
 
 # Command untuk menjalankan aplikasi
-CMD ["node", "app.js"]
+CMD ["node", "./src/server/server.js"]
