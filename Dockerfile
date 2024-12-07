@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Set lingkungan (opsional)
-ENV NODE_ENV=production
+ENV .env=production
 
 # Expose port yang akan digunakan aplikasi
 EXPOSE 8080
